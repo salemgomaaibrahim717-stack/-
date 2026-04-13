@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="تصفح أحدث المقالات التقنية من مصادر موثوقة وبواجهة سريعة وديناميكية">
+  <title>المقالات - مدونتي</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📰</text></svg>">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-salem fixed-top">
+    <div class="container">
+      <a class="navbar-brand navbar-brand-salem" href="index.html">
+        <div class="brand-icon">م</div>
+        <div class="brand-text"><span class="brand-name">مدونتي</span></div>
+      </a>
+      <button class="navbar-toggler navbar-toggler-salem" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home ms-1"></i> الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link active" href="articles.html"><i class="fas fa-newspaper ms-1"></i> المقالات</a></li>
+          <li class="nav-item"><a class="nav-link" href="categories.html"><i class="fas fa-th-large ms-1"></i> التصنيفات</a></li>
+          <li class="nav-item"><a class="nav-link" href="add-article.html"><i class="fas fa-plus-circle ms-1"></i> إضافة مقال</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html"><i class="fas fa-info-circle ms-1"></i> من نحن</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope ms-1"></i> تواصل معنا</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <a href="login.html" class="btn btn-outline-light btn-sm"><i class="fas fa-sign-in-alt ms-1"></i> دخول</a>
+          <a href="register.html" class="btn btn-light btn-sm text-primary fw-bold"><i class="fas fa-user-plus ms-1"></i> تسجيل</a>
+          <button class="nav-search-btn ms-2" data-bs-toggle="modal" data-bs-target="#searchModal" aria-label="بحث">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-hero articles-page-hero  text-center" style="margin-top:70px;">
+    <div class="container py-5 position-relative" style="z-index:1;">
+      <span class="hero-badge"><i class="fas fa-bolt"></i> محتوى تقني متجدد</span>
+      <h1 class="page-hero-title mb-3" id="articles-page-title">كل المقالات التقنية</h1>
+      <p class="page-hero-text mb-4 mx-auto" id="articles-page-subtitle">مجموعة متنوعة من أحدث الأخبار والمقالات التقنية.</p>
+      <div class="articles-page-stats">
+        <div class="articles-page-stat-card justify-content-center">
+          <span class="articles-page-stat-number" id="articles-total-count">0+</span>
+          <span class="articles-page-stat-label">إجمالي المقالات</span>
+        </div>
+        <div class="articles-page-stat-card">
+          <span class="articles-page-stat-number" id="articles-results-count">0</span>
+          <span class="articles-page-stat-label">نتيجة مطابقة</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="articles-controls py-4">
+    <div class="container">
+      <div class="row g-3 align-items-center">
+        <div class="col-lg-7">
+          <div class="categories-scroll" id="articles-category-pills"></div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <input id="articles-search-input" type="search" class="form-control form-control-salem" placeholder="ابحث بالعنوان أو المصدر..." aria-label="بحث المقالات">
+        </div>
+        <div class="col-sm-6 col-lg-2">
+          <select id="articles-sort-select" class="form-control form-control-salem" aria-label="ترتيب المقالات">
+            <option value="newest">الأحدث أولاً</option>
+            <option value="oldest">الأقدم أولاً</option>
+            <option value="source">حسب المصدر</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-3">
+    <div class="container">
+      <div id="articles-page-featured"></div>
+    </div>
+  </section>
+
+  <section class="articles-section pt-2 pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="row stagger-children" id="articles-page-grid"></div>
+          <nav class="pagination-wrapper" id="articles-page-pagination"></nav>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title"><i class="fas fa-lightbulb ms-2" style="color: var(--gold);"></i>نصيحة سريعة</h3>
+            <p class="mb-0" style="color: var(--gray-400); font-size: .9rem; line-height: 1.9;">
+              استخدم البحث مع التصنيف معًا للحصول على نتائج أدق. يمكنك أيضًا ترتيب النتائج حسب المصدر لمتابعة الجهة التي تفضّلها.
+            </p>
+          </div>
+
+          <div class="sidebar-widget newsletter-widget">
+            <h3 class="sidebar-widget-title"><i class="fas fa-paper-plane ms-2"></i>النشرة البريدية</h3>
+            <p class="newsletter-text">اشترك ليصلك ملخص أهم المقالات التقنية أسبوعيًا.</p>
+            <div class="newsletter-input-group">
+              <input type="email" placeholder="بريدك الإلكتروني">
+              <button class="newsletter-btn" type="button" onclick="UI.showToast('تم الاشتراك بنجاح', 'fas fa-check-circle')">
+                <i class="fas fa-paper-plane ms-1"></i> اشترك الآن
+              </button>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title"><i class="fas fa-link ms-2" style="color: var(--accent);"></i>تصفّح التصنيفات</h3>
+            <p class="mb-3" style="color: var(--gray-400); font-size: .88rem;">انتقل لصفحة التصنيفات لاكتشاف المجالات النشطة بسرعة.</p>
+            <a href="categories.html" class="read-more-btn" style="width: 100%; justify-content: center;">
+              اذهب للتصنيفات <i class="fas fa-arrow-left"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-section"></footer>
+
+  <div class="modal fade search-modal" id="searchModal" tabindex="-1" aria-label="بحث" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" style="color: var(--white); font-family: var(--font-heading); font-weight: 700;">
+            <i class="fas fa-search ms-2"></i> البحث في المقالات
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" id="modal-search-input" class="search-modal-input" placeholder="اكتب كلمة البحث..." oninput="clearTimeout(this._timer); this._timer = setTimeout(() => App.performSearch(this.value), 400);">
+          <div class="search-results-container" id="search-results"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

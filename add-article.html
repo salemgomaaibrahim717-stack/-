@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="إضافة مقال جديد - مدونتي">
+  <title>إضافة مقال جديد - مدونتي</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📰</text></svg>">
+</head>
+<body class="add-article-page">
+
+  <main class="compose-page">
+    <section class="compose-hero">
+      <div class="container text-center">
+        <div class="compose-hero-badge">
+          <i class="fas fa-pen-nib"></i>
+          غرفة الكتابة
+        </div>
+        <h1 class="compose-hero-title">اكتب مقالًا قويًا ويستحق القراءة</h1>
+        <p class="compose-hero-text mx-auto text-center">
+          صمّم مقالك بأسلوب احترافي، أضف صورة غلاف مناسبة، ونظّم المحتوى ليظهر بشكل مميز لقرّاء مدونتي.
+        </p>
+      </div>
+    </section>
+
+    <section class="compose-section">
+      <div class="container p-4">
+        <form class="compose-grid" id="articleComposeForm">
+          <div class="compose-main-card">
+            <div class="compose-block">
+              <label for="articleTitle" class="compose-label">عنوان المقال</label>
+              <input id="articleTitle" type="text" class="compose-input compose-input-lg" placeholder="مثال: كيف تغيّر نماذج الذكاء الاصطناعي مستقبل البرمجة" required>
+            </div>
+
+            <div class="compose-block">
+              <label for="articleSummary" class="compose-label">مقدمة قصيرة</label>
+              <textarea id="articleSummary" class="compose-input" rows="3" placeholder="اكتب 2-3 جمل توضح قيمة المقال..." required></textarea>
+            </div>
+
+            <div class="compose-block">
+              <div class="compose-toolbar">
+                <button type="button" class="toolbar-btn"><i class="fas fa-bold"></i></button>
+                <button type="button" class="toolbar-btn"><i class="fas fa-italic"></i></button>
+                <button type="button" class="toolbar-btn"><i class="fas fa-heading"></i></button>
+                <button type="button" class="toolbar-btn"><i class="fas fa-list-ul"></i></button>
+                <button type="button" class="toolbar-btn"><i class="fas fa-quote-right"></i></button>
+                <button type="button" class="toolbar-btn"><i class="fas fa-code"></i></button>
+                <button type="button" class="toolbar-btn"><i class="fas fa-link"></i></button>
+                <button type="button" class="toolbar-btn"><i class="fas fa-image"></i></button>
+              </div>
+
+              <label for="articleContent" class="compose-label">المحتوى الكامل</label>
+              <textarea id="articleContent" class="compose-input compose-editor" rows="16" placeholder="ابدأ كتابة المقال هنا..." required></textarea>
+
+              <div class="compose-meta">
+                <span><i class="far fa-keyboard"></i> <strong id="wordCount">0</strong> كلمة</span>
+                <span><i class="far fa-clock"></i> وقت قراءة تقريبي: <strong id="readTime">0</strong> دقيقة</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="compose-side-column">
+            <div class="compose-side-card">
+              <h3 class="compose-side-title"><i class="far fa-image"></i> صورة الغلاف</h3>
+              <input id="coverImageUrl" type="url" class="compose-input" placeholder="https://example.com/cover.jpg">
+              <div class="compose-cover-preview" id="coverPreview">
+                <i class="fas fa-image"></i>
+                <span>معاينة صورة الغلاف</span>
+              </div>
+            </div>
+
+            <div class="compose-side-card">
+              <h3 class="compose-side-title"><i class="fas fa-sliders-h"></i> إعدادات المقال</h3>
+              <label class="compose-label" for="articleCategory">التصنيف</label>
+              <select id="articleCategory" class="compose-input" required>
+                <option value="">اختر التصنيف</option>
+                <option value="technology">التكنولوجيا</option>
+                <option value="ai">الذكاء الاصطناعي</option>
+                <option value="programming">البرمجة</option>
+                <option value="security">الأمن السيبراني</option>
+                <option value="mobile">الهواتف الذكية</option>
+              </select>
+
+              <label class="compose-label" for="articleTags">الوسوم</label>
+              <input id="articleTags" type="text" class="compose-input" placeholder="مثال: GPT, Python, Cloud">
+              <div class="compose-tags-preview" id="tagsPreview"></div>
+            </div>
+
+            <div class="compose-side-card compose-side-card-accent">
+              <h3 class="compose-side-title"><i class="fas fa-check-circle"></i> قبل النشر</h3>
+              <ul class="compose-checklist">
+                <li>العنوان واضح وجذاب</li>
+                <li>المقدمة تلخص الفكرة بسرعة</li>
+                <li>المقال يحتوي أمثلة عملية</li>
+                <li>تمت مراجعة الإملاء والروابط</li>
+              </ul>
+            </div>
+
+            <div class="compose-actions">
+              <button type="submit" class="compose-btn compose-btn-primary">
+                <i class="fas fa-paper-plane"></i>
+                نشر المقال
+              </button>
+              <button type="button" class="compose-btn compose-btn-secondary">
+                <i class="far fa-save"></i>
+                حفظ كمسودة
+              </button>
+            </div>
+          </aside>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    const contentInput = document.getElementById('articleContent');
+    const wordCount = document.getElementById('wordCount');
+    const readTime = document.getElementById('readTime');
+    const coverImageUrl = document.getElementById('coverImageUrl');
+    const coverPreview = document.getElementById('coverPreview');
+    const tagsInput = document.getElementById('articleTags');
+    const tagsPreview = document.getElementById('tagsPreview');
+
+    function updateStats() {
+      const text = contentInput.value.trim();
+      const words = text ? text.split(/\s+/).length : 0;
+      wordCount.textContent = words;
+      readTime.textContent = words ? Math.max(1, Math.ceil(words / 220)) : 0;
+    }
+
+    function updateCoverPreview() {
+      const url = coverImageUrl.value.trim();
+      if (!url) {
+        coverPreview.innerHTML = '<i class="fas fa-image"></i><span>معاينة صورة الغلاف</span>';
+        return;
+      }
+
+      const img = document.createElement('img');
+      img.src = url;
+      img.alt = 'Cover Preview';
+      img.addEventListener('error', () => {
+        coverPreview.innerHTML = '<i class="fas fa-triangle-exclamation"></i><span>تعذر تحميل الصورة</span>';
+      });
+
+      coverPreview.innerHTML = '';
+      coverPreview.appendChild(img);
+    }
+
+    function updateTags() {
+      const tags = tagsInput.value.split(',').map(tag => tag.trim()).filter(Boolean).slice(0, 8);
+      tagsPreview.innerHTML = tags.map(tag => `<span class="tag-pill">${tag}</span>`).join('');
+    }
+
+    contentInput.addEventListener('input', updateStats);
+    coverImageUrl.addEventListener('input', updateCoverPreview);
+    tagsInput.addEventListener('input', updateTags);
+
+    document.getElementById('articleComposeForm').addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const user = JSON.parse(localStorage.getItem('salem_user') || 'null');
+      if (!user) {
+        if (typeof UI !== 'undefined') {
+          UI.showToast('يرجى تسجيل الدخول قبل نشر المقال', 'fas fa-user-lock');
+        }
+        setTimeout(() => { window.location.href = 'login.html'; }, 900);
+        return;
+      }
+
+      const title = document.getElementById('articleTitle').value.trim();
+      const summary = document.getElementById('articleSummary').value.trim();
+      const content = document.getElementById('articleContent').value.trim();
+      const category = document.getElementById('articleCategory').value || 'technology';
+      const tags = tagsInput.value.split(',').map(tag => tag.trim()).filter(Boolean).slice(0, 8);
+      const cover = coverImageUrl.value.trim();
+
+      const article = {
+        id: `user-${Date.now()}`,
+        title,
+        description: summary,
+        content,
+        url: '#',
+        image: cover || 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80',
+        publishedAt: new Date().toISOString(),
+        source: user.name || user.email || 'كاتب مدونتي',
+        sourceUrl: '#',
+        category,
+        tags,
+        authorEmail: user.email || ''
+      };
+
+      const storageKey = 'salem_user_articles';
+      const current = JSON.parse(localStorage.getItem(storageKey) || '[]');
+      current.unshift(article);
+      localStorage.setItem(storageKey, JSON.stringify(current));
+
+      if (typeof UI !== 'undefined') {
+        UI.showToast('تم نشر المقال وإضافته لملفك الشخصي', 'fas fa-check-circle');
+      }
+
+      setTimeout(() => {
+        window.location.href = 'profile.html';
+      }, 900);
+    });
+
+    updateStats();
+  </script>
+</body>
+</html>

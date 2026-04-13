@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="مدونتي - مدونة تقنية عربية متخصصة في أحدث أخبار التكنولوجيا والذكاء الاصطناعي والبرمجة">
+  <meta name="keywords" content="تكنولوجيا، ذكاء اصطناعي، برمجة، أخبار تقنية، مدونتي">
+  <meta name="author" content="مدونتي">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="مدونتي - عالم التقنية بين يديك">
+  <meta property="og:description" content="مدونة تقنية عربية متخصصة في أحدث أخبار التكنولوجيا">
+  <meta property="og:type" content="website">
+  
+  <title>مدونتي - عالم التقنية بين يديك</title>
+  
+  <!-- Bootstrap 5 RTL -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📡</text></svg>">
+</head>
+<body>
+
+  <!-- ==================== Navbar ==================== -->
+  <nav class="navbar navbar-expand-lg navbar-salem fixed-top">
+    <div class="container">
+      <a class="navbar-brand navbar-brand-salem" href="index.html">
+        <div class="brand-icon">م</div>
+        <div class="brand-text">
+          <span class="brand-name"> مدونتي</span>
+          
+        </div>
+      </a>
+      
+      <button class="navbar-toggler navbar-toggler-salem" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fas fa-home ms-1"></i> الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link" href="articles.html"><i class="fas fa-newspaper ms-1"></i> المقالات</a></li>
+          <li class="nav-item"><a class="nav-link" href="categories.html"><i class="fas fa-th-large ms-1"></i> التصنيفات</a></li>
+          <li class="nav-item"><a class="nav-link" href="add-article.html"><i class="fas fa-plus-circle ms-1"></i> إضافة مقال</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html"><i class="fas fa-info-circle ms-1"></i> من نحن</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope ms-1"></i> تواصل معنا</a></li>
+        </ul>
+        
+        <div class="d-flex align-items-center gap-2">
+          <a href="login.html" class="btn btn-outline-light btn-sm"><i class="fas fa-sign-in-alt ms-1"></i> دخول</a>
+          <a href="register.html" class="btn btn-light btn-sm text-primary fw-bold"><i class="fas fa-user-plus ms-1"></i> تسجيل</a>
+          <button class="nav-search-btn ms-2" data-bs-toggle="modal" data-bs-target="#searchModal" aria-label="بحث">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== Hero Section ==================== -->
+  <section class="hero-section">
+    <div class="hero-grid-pattern"></div>
+    <div class="hero-floating-shapes">
+      <div class="floating-shape"></div>
+      <div class="floating-shape"></div>
+      <div class="floating-shape"></div>
+    </div>
+    
+    <div class="container position-relative" style="z-index: 5;">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0 mt-5">  
+          <h1 class="hero-title">
+            عالم <span class="highlight mt-5">التقنية</span><br>
+            بين يديك
+          </h1>
+          
+          <p class="hero-description">
+            اكتشف أحدث الأخبار والمقالات في عالم التكنولوجيا، الذكاء الاصطناعي، 
+            البرمجة والابتكار. نقدم لك محتوى تقني موثوق ومحدث لحظة بلحظة.
+          </p>
+          
+          <form class="hero-search-box" onsubmit="App.heroSearch(event)">
+            <input type="text" id="hero-search-input" placeholder="ابحث عن مقال أو موضوع تقني...">
+            <i class="fas fa-search search-icon"></i>
+          </form>
+          
+          <div class="hero-stats">
+            <div class="hero-stat-item">
+              <span class="hero-stat-number" id="stat-total">0+</span>
+              <span class="hero-stat-label">مقال تقني</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-number" id="stat-categories">0+</span>
+              <span class="hero-stat-label">تصنيف</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-number" id="stat-sources">0+</span>
+              <span class="hero-stat-label">مصدر موثوق</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6">
+          <div id="hero-featured">
+            <!-- Hero featured card loaded dynamically -->
+            <div class="hero-featured-card">
+              <div class="skeleton" style="height: 240px;"></div>
+              <div class="hero-featured-body">
+                <div class="skeleton skeleton-title" style="width: 40%;"></div>
+                <div class="skeleton skeleton-title" style="width: 90%; margin-top: .75rem;"></div>
+                <div class="skeleton skeleton-text-short" style="margin-top: .75rem;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== Categories Section ==================== -->
+  <section class="categories-section">
+    <div class="container">
+      <div class="categories-scroll">
+        <button class="category-pill active" data-cat="all" onclick="App.filterByCategory('all', this)">
+          <i class="fas fa-globe"></i> الكل
+        </button>
+        <button class="category-pill" data-cat="technology" onclick="App.filterByCategory('technology', this)">
+          <i class="fas fa-microchip"></i> التكنولوجيا
+        </button>
+        <button class="category-pill" data-cat="ai" onclick="App.filterByCategory('ai', this)">
+          <i class="fas fa-robot"></i> الذكاء الاصطناعي
+        </button>
+        <button class="category-pill" data-cat="mobile" onclick="App.filterByCategory('mobile', this)">
+          <i class="fas fa-mobile-alt"></i> الهواتف
+        </button>
+        <button class="category-pill" data-cat="programming" onclick="App.filterByCategory('programming', this)">
+          <i class="fas fa-code"></i> البرمجة
+        </button>
+        <button class="category-pill" data-cat="security" onclick="App.filterByCategory('security', this)">
+          <i class="fas fa-shield-alt"></i> الأمن السيبراني
+        </button>
+        <button class="category-pill" data-cat="gaming" onclick="App.filterByCategory('gaming', this)">
+          <i class="fas fa-gamepad"></i> الألعاب
+        </button>
+        <button class="category-pill" data-cat="science" onclick="App.filterByCategory('science', this)">
+          <i class="fas fa-flask"></i> العلوم
+        </button>
+        <button class="category-pill" data-cat="business" onclick="App.filterByCategory('business', this)">
+          <i class="fas fa-chart-line"></i> الأعمال
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== Featured Article ==================== -->
+  <section class="py-5">
+    <div class="container">
+      <div id="featured-article">
+        <!-- Featured article loaded dynamically -->
+        <div class="featured-article-card">
+          <div class="row g-0">
+            <div class="col-lg-6">
+              <div class="skeleton" style="height: 350px;"></div>
+            </div>
+            <div class="col-lg-6">
+              <div class="featured-article-body">
+                <div class="skeleton" style="width: 120px; height: 18px; margin-bottom: 1rem;"></div>
+                <div class="skeleton skeleton-title" style="width: 90%; height: 24px;"></div>
+                <div class="skeleton skeleton-title" style="width: 70%; height: 24px; margin-top: .5rem;"></div>
+                <div class="skeleton skeleton-text" style="margin-top: 1rem;"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text-short"></div>
+                <div class="skeleton" style="width: 140px; height: 42px; border-radius: 50px; margin-top: 1.5rem;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== Articles Grid + Sidebar ==================== -->
+  <section class="articles-section">
+    <div class="container">
+      <div class="row mb-4 align-items-end">
+        <div class="col">
+          <h2 class="section-title">أحدث المقالات</h2>
+          <p class="section-subtitle">تابع آخر الأخبار والمقالات التقنية من أفضل المصادر العالمية</p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <!-- Main Content -->
+        <div class="col-lg-8">
+          <div class="row stagger-children" id="articles-grid">
+            <!-- Articles loaded dynamically -->
+          </div>
+          
+          <!-- Pagination -->
+          <nav class="pagination-wrapper" id="pagination">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#" onclick="event.preventDefault();">
+                  <i class="fas fa-chevron-right"></i>
+                </a>
+              </li>
+              <li class="page-item active"><a class="page-link" href="#" onclick="event.preventDefault();">1</a></li>
+              <li class="page-item"><a class="page-link" href="#" onclick="event.preventDefault();">2</a></li>
+              <li class="page-item"><a class="page-link" href="#" onclick="event.preventDefault();">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" onclick="event.preventDefault();">
+                  <i class="fas fa-chevron-left"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+          <!-- Trending Widget -->
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">
+              <i class="fas fa-fire-alt ms-2" style="color: var(--accent);"></i>
+              الأكثر رواجاً
+            </h3>
+            <div id="trending-list">
+              <!-- Trending articles loaded dynamically -->
+              <div class="py-2">
+                <div class="skeleton skeleton-title"></div>
+                <div class="skeleton skeleton-text-short mt-2"></div>
+              </div>
+              <div class="py-2">
+                <div class="skeleton skeleton-title"></div>
+                <div class="skeleton skeleton-text-short mt-2"></div>
+              </div>
+              <div class="py-2">
+                <div class="skeleton skeleton-title"></div>
+                <div class="skeleton skeleton-text-short mt-2"></div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Newsletter Widget -->
+          <div class="sidebar-widget newsletter-widget">
+            <h3 class="sidebar-widget-title">
+              <i class="fas fa-paper-plane ms-2"></i>
+              النشرة البريدية
+            </h3>
+            <p class="newsletter-text">
+              اشترك في نشرتنا البريدية واحصل على أحدث المقالات التقنية مباشرة في بريدك
+            </p>
+            <div class="newsletter-input-group">
+              <input type="email" placeholder="بريدك الإلكتروني" aria-label="البريد الإلكتروني">
+              <button class="newsletter-btn" onclick="UI.showToast('شكراً لاشتراكك! 🎉', 'fas fa-check-circle')">
+                <i class="fas fa-paper-plane ms-1"></i>
+                اشترك الآن
+              </button>
+            </div>
+          </div>
+          
+          <!-- Tags Widget -->
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">
+              <i class="fas fa-tags ms-2" style="color: var(--gold);"></i>
+              الوسوم
+            </h3>
+            <div class="tag-cloud">
+              <span class="tag-item" onclick="App.filterByCategory('ai', this)">ذكاء اصطناعي</span>
+              <span class="tag-item" onclick="App.filterByCategory('programming', this)">برمجة</span>
+              <span class="tag-item" onclick="App.filterByCategory('mobile', this)">هواتف ذكية</span>
+              <span class="tag-item" onclick="App.filterByCategory('security', this)">أمن سيبراني</span>
+              <span class="tag-item" onclick="App.filterByCategory('technology', this)">تكنولوجيا</span>
+              <span class="tag-item" onclick="App.filterByCategory('science', this)">علوم</span>
+              <span class="tag-item" onclick="App.filterByCategory('gaming', this)">ألعاب</span>
+              <span class="tag-item" onclick="App.filterByCategory('business', this)">أعمال</span>
+              <span class="tag-item" onclick="App.filterByCategory('ai', this)">تعلم آلي</span>
+              <span class="tag-item" onclick="App.filterByCategory('technology', this)">إنترنت الأشياء</span>
+              <span class="tag-item" onclick="App.filterByCategory('technology', this)">حوسبة سحابية</span>
+              <span class="tag-item" onclick="App.filterByCategory('technology', this)">بلوكتشين</span>
+            </div>
+          </div>
+          
+          <!-- Ad Space / About Widget -->
+          <div class="sidebar-widget" style="text-align: center; background: var(--off-white);">
+            <div style="padding: 2rem 1rem;">
+              <i class="fas fa-ad" style="font-size: 2.5rem; color: var(--gray-200); margin-bottom: 1rem; display: block;"></i>
+              <p style="color: var(--gray-300); font-size: .85rem; margin: 0;">مساحة إعلانية</p>
+              <a href="contact.html" style="color: var(--accent); font-size: .8rem; font-weight: 600;">تواصل معنا للإعلان</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== Footer ==================== -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row">
+        <!-- Brand Column -->
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <div class="brand-icon">م</div>
+            <h3 class="footer-brand-name mb-0">مدونتي</h3>
+          </div>
+          <p class="footer-description">
+            مدونة تقنية عربية متخصصة تقدم لك أحدث الأخبار والمقالات 
+            في عالم التكنولوجيا والابتكار من أفضل المصادر العالمية.
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="col-6 col-lg-2 mb-4 mb-lg-0">
+          <h4 class="footer-title">روابط سريعة</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+            <li><a href="#">سياسة الخصوصية</a></li>
+            <li><a href="#">شروط الاستخدام</a></li>
+          </ul>
+        </div>
+        
+        <!-- Categories -->
+        <div class="col-6 col-lg-2 mb-4 mb-lg-0">
+          <h4 class="footer-title">التصنيفات</h4>
+          <ul class="footer-links">
+            <li><a href="#" onclick="App.filterByCategory('technology')">التكنولوجيا</a></li>
+            <li><a href="#" onclick="App.filterByCategory('ai')">الذكاء الاصطناعي</a></li>
+            <li><a href="#" onclick="App.filterByCategory('programming')">البرمجة</a></li>
+            <li><a href="#" onclick="App.filterByCategory('mobile')">الهواتف</a></li>
+            <li><a href="#" onclick="App.filterByCategory('security')">الأمن السيبراني</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact Info -->
+        <div class="col-lg-4">
+          <h4 class="footer-title">تواصل معنا</h4>
+          <ul class="footer-links">
+            <li>
+              <a href="mailto:info@salemblog.com">
+                <i class="fas fa-envelope ms-2" style="color: var(--accent);"></i>
+                info@salemblog.com
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fas fa-map-marker-alt ms-2" style="color: var(--accent);"></i>
+                القاهرة، مصر
+              </a>
+            </li>
+          </ul>
+          <div class="mt-3">
+            <p style="color: rgba(255,255,255,.4); font-size: .82rem; margin-bottom: .5rem;">
+              <i class="fas fa-rss ms-1" style="color: var(--gold);"></i>
+              تابعنا للحصول على أحدث المقالات
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>
+          جميع الحقوق محفوظة &copy; 2026 
+          <strong style="color: var(--white);">مدونتي</strong> 
+       
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== Search Modal ==================== -->
+  <div class="modal fade search-modal" id="searchModal" tabindex="-1" aria-label="بحث" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" style="color: var(--white); font-family: var(--font-heading); font-weight: 700;">
+            <i class="fas fa-search ms-2"></i> البحث في المقالات
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" id="modal-search-input" class="search-modal-input" 
+                 placeholder="اكتب كلمة البحث..." 
+                 oninput="clearTimeout(this._timer); this._timer = setTimeout(() => App.performSearch(this.value), 500);">
+          <div class="search-results-container" id="search-results">
+            <div class="text-center py-4">
+              <i class="fas fa-search" style="font-size: 2.5rem; color: rgba(255,255,255,.1); display: block; margin-bottom: .75rem;"></i>
+              <p style="color: rgba(255,255,255,.3); font-size: .9rem;">اكتب للبحث في المقالات التقنية</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== Back to Top ==================== -->
+  <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ==================== Scripts ==================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

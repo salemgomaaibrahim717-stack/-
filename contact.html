@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="مدونتي - تواصل معنا ونحن سعداء بالرد على استفساراتكم">
+  <title>تواصل معنا - مدونتي</title>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📡</text></svg>">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-salem fixed-top">
+    <div class="container">
+      <a class="navbar-brand navbar-brand-salem" href="index.html">
+        <div class="brand-icon">م</div>
+        <div class="brand-text">
+          <span class="brand-name">مدونتي</span>
+          <span class="brand-tagline">مدونتي</span>
+        </div>
+      </a>
+      <button class="navbar-toggler navbar-toggler-salem" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home ms-1"></i> الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link" href="articles.html"><i class="fas fa-newspaper ms-1"></i> المقالات</a></li>
+          <li class="nav-item"><a class="nav-link" href="categories.html"><i class="fas fa-th-large ms-1"></i> التصنيفات</a></li>
+          <li class="nav-item"><a class="nav-link" href="add-article.html"><i class="fas fa-plus-circle ms-1"></i> إضافة مقال</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html"><i class="fas fa-info-circle ms-1"></i> من نحن</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html"><i class="fas fa-envelope ms-1"></i> تواصل معنا</a></li>
+        </ul>
+        <div class="d-flex gap-2">
+            <a href="login.html" class="btn btn-outline-light btn-sm"><i class="fas fa-sign-in-alt ms-1"></i> دخول</a>
+            <a href="register.html" class="btn btn-light btn-sm text-primary fw-bold"><i class="fas fa-user-plus ms-1"></i> تسجيل</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="about-hero" style="margin-top: 70px;">
+    <div class="container">
+      <div class="hero-badge mx-auto" style="width: fit-content;">
+        <i class="fas fa-headset"></i>
+        نحن هنا لمساعدتك
+      </div>
+      <h1 class="about-hero-title">تواصل معنا</h1>
+      <p class="about-hero-text">
+        لديك سؤال أو اقتراح أو تريد التعاون معنا؟ نحن سعداء بسماع رأيك
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Contact Info Cards -->
+        <div class="col-lg-4">
+          <div class="d-flex flex-column gap-3">
+            <!-- Email -->
+            <div class="sidebar-widget fade-up" style="border-right: 4px solid var(--accent);">
+              <div class="d-flex align-items-center gap-3">
+                <div style="width: 52px; height: 52px; background: rgba(233,69,96,.1); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: var(--accent); flex-shrink: 0;">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <h4 style="font-family: var(--font-heading); font-weight: 700; font-size: .95rem; color: var(--primary); margin-bottom: .2rem;">البريد الإلكتروني</h4>
+                  <a href="mailto:info@salemblog.com" style="color: var(--gray-400); font-size: .88rem;">info@salemblog.com</a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Location -->
+            <div class="sidebar-widget fade-up" style="border-right: 4px solid var(--gold);">
+              <div class="d-flex align-items-center gap-3">
+                <div style="width: 52px; height: 52px; background: rgba(240,165,0,.1); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: var(--gold); flex-shrink: 0;">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h4 style="font-family: var(--font-heading); font-weight: 700; font-size: .95rem; color: var(--primary); margin-bottom: .2rem;">الموقع</h4>
+                  <span style="color: var(--gray-400); font-size: .88rem;">القاهرة، مصر</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Social -->
+            <div class="sidebar-widget fade-up" style="border-right: 4px solid var(--secondary);">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div style="width: 52px; height: 52px; background: rgba(15,52,96,.1); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: var(--secondary); flex-shrink: 0;">
+                  <i class="fas fa-share-alt"></i>
+                </div>
+                <div>
+                  <h4 style="font-family: var(--font-heading); font-weight: 700; font-size: .95rem; color: var(--primary); margin-bottom: .2rem;">تابعنا</h4>
+                  <span style="color: var(--gray-400); font-size: .88rem;">على منصات التواصل</span>
+                </div>
+              </div>
+              <div class="footer-social" style="justify-content: flex-start;">
+                <a href="#" style="background: rgba(29,161,242,.1); border-color: rgba(29,161,242,.2); color: #1da1f2;"><i class="fab fa-twitter"></i></a>
+                <a href="#" style="background: rgba(66,103,178,.1); border-color: rgba(66,103,178,.2); color: #4267b2;"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" style="background: rgba(225,48,108,.1); border-color: rgba(225,48,108,.2); color: #e1306c;"><i class="fab fa-instagram"></i></a>
+                <a href="#" style="background: rgba(255,0,0,.1); border-color: rgba(255,0,0,.2); color: #ff0000;"><i class="fab fa-youtube"></i></a>
+                <a href="#" style="background: rgba(0,119,181,.1); border-color: rgba(0,119,181,.2); color: #0077b5;"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+
+            <!-- Response Time -->
+            <div class="sidebar-widget fade-up" style="background: var(--gradient-hero); border: none; text-align: center;">
+              <i class="fas fa-clock" style="font-size: 2rem; color: var(--accent); display: block; margin-bottom: .75rem;"></i>
+              <h4 style="font-family: var(--font-heading); font-weight: 700; color: var(--white); font-size: 1rem; margin-bottom: .4rem;">وقت الاستجابة</h4>
+              <p style="color: rgba(255,255,255,.5); font-size: .85rem; margin: 0;">نرد على رسائلكم خلال 24 ساعة كحد أقصى</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <div class="col-lg-8">
+          <div class="contact-form-card fade-up">
+            <h3 style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 800; color: var(--primary); margin-bottom: .5rem;">
+              <i class="fas fa-paper-plane ms-2" style="color: var(--accent);"></i>
+              أرسل لنا رسالة
+            </h3>
+            <p style="color: var(--gray-400); font-size: .9rem; margin-bottom: 2rem;">
+              املأ النموذج التالي وسنتواصل معك في أقرب وقت
+            </p>
+            
+            <form id="contactForm" onsubmit="handleContactSubmit(event)">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label-salem">الاسم الكامل <span style="color: var(--accent);">*</span></label>
+                  <input type="text" class="form-control form-control-salem" placeholder="أدخل اسمك الكامل" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label-salem">البريد الإلكتروني <span style="color: var(--accent);">*</span></label>
+                  <input type="email" class="form-control form-control-salem" placeholder="example@email.com" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label-salem">رقم الهاتف</label>
+                  <input type="tel" class="form-control form-control-salem" placeholder="+20 xxx xxx xxxx">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label-salem">الموضوع <span style="color: var(--accent);">*</span></label>
+                  <select class="form-select form-control-salem" required>
+                    <option value="" selected disabled>اختر الموضوع</option>
+                    <option value="general">استفسار عام</option>
+                    <option value="content">اقتراح محتوى</option>
+                    <option value="advertising">إعلان</option>
+                    <option value="collaboration">تعاون</option>
+                    <option value="feedback">ملاحظات</option>
+                    <option value="bug">الإبلاغ عن مشكلة</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label-salem">الرسالة <span style="color: var(--accent);">*</span></label>
+                  <textarea class="form-control form-control-salem" rows="6" placeholder="اكتب رسالتك هنا..." required></textarea>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="agreeCheck" required>
+                    <label class="form-check-label" for="agreeCheck" style="font-size: .85rem; color: var(--gray-400);">
+                      أوافق على سياسة الخصوصية وأن يتم التواصل معي عبر البريد الإلكتروني
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="read-more-btn" id="submitBtn" style="display: inline-flex;">
+                    <i class="fas fa-paper-plane"></i>
+                    إرسال الرسالة
+                  </button>
+                </div>
+              </div>
+            </form>
+            
+            <!-- Success Message -->
+            <div id="successMsg" class="text-center py-4" style="display: none;">
+              <div style="width: 80px; height: 80px; background: rgba(37,211,102,.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem; color: #25d366;">
+                <i class="fas fa-check"></i>
+              </div>
+              <h3 style="font-family: var(--font-heading); font-weight: 700; color: var(--primary); margin-bottom: .5rem;">تم الإرسال بنجاح! 🎉</h3>
+              <p style="color: var(--gray-400); font-size: .95rem;">شكراً لتواصلك معنا. سنرد عليك في أقرب وقت ممكن.</p>
+              <button class="read-more-btn mt-2" onclick="resetContactForm()" style="display: inline-flex;">
+                <i class="fas fa-redo"></i> إرسال رسالة أخرى
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-5" style="background: var(--off-white);">
+    <div class="container">
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-8 text-center">
+          <h2 class="section-title mx-auto" style="display: table;">الأسئلة الشائعة</h2>
+          <p class="section-subtitle mt-3">إجابات لأكثر الأسئلة شيوعاً</p>
+        </div>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item border-0 mb-3" style="border-radius: var(--radius-md) !important; overflow: hidden; box-shadow: var(--shadow-sm);">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" style="font-family: var(--font-heading); font-weight: 600; font-size: .95rem; color: var(--primary);">
+                  <i class="fas fa-question-circle ms-2" style="color: var(--accent);"></i>
+                  ما هو مدونتي؟
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" style="color: var(--gray-400); font-size: .92rem; line-height: 1.9;">
+                  مدونتي هي مدونة تقنية عربية متخصصة تهدف إلى تقديم أحدث الأخبار والمقالات في مجال التكنولوجيا والابتكار من مصادر عالمية موثوقة باللغة العربية.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item border-0 mb-3" style="border-radius: var(--radius-md) !important; overflow: hidden; box-shadow: var(--shadow-sm);">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" style="font-family: var(--font-heading); font-weight: 600; font-size: .95rem; color: var(--primary);">
+                  <i class="fas fa-question-circle ms-2" style="color: var(--accent);"></i>
+                  كيف يمكنني نشر مقال في مدونتي؟
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" style="color: var(--gray-400); font-size: .92rem; line-height: 1.9;">
+                  يمكنك التواصل معنا عبر النموذج أعلاه واختيار "اقتراح محتوى" كموضوع. سنراجع محتواك ونتواصل معك في حال الموافقة على نشره.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item border-0 mb-3" style="border-radius: var(--radius-md) !important; overflow: hidden; box-shadow: var(--shadow-sm);">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" style="font-family: var(--font-heading); font-weight: 600; font-size: .95rem; color: var(--primary);">
+                  <i class="fas fa-question-circle ms-2" style="color: var(--accent);"></i>
+                  هل يمكنني الإعلان في المدونة؟
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" style="color: var(--gray-400); font-size: .92rem; line-height: 1.9;">
+                  نعم، نرحب بالمعلنين. يمكنك اختيار "إعلان" في نموذج التواصل وسنرسل لك تفاصيل الأسعار والمساحات الإعلانية المتاحة.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item border-0 mb-3" style="border-radius: var(--radius-md) !important; overflow: hidden; box-shadow: var(--shadow-sm);">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" style="font-family: var(--font-heading); font-weight: 600; font-size: .95rem; color: var(--primary);">
+                  <i class="fas fa-question-circle ms-2" style="color: var(--accent);"></i>
+                  من أين تأتي المقالات والأخبار؟
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" style="color: var(--gray-400); font-size: .92rem; line-height: 1.9;">
+                  نعتمد على مصادر عالمية موثوقة من خلال APIs متخصصة في الأخبار التقنية، مع مراجعة المحتوى لضمان الدقة والجودة.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <div class="brand-icon">م</div>
+            <h3 class="footer-brand-name mb-0">مدونتي</h3>
+          </div>
+          <p class="footer-description">مدونة تقنية عربية متخصصة تقدم لك أحدث الأخبار والمقالات في عالم التكنولوجيا.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2 mb-4 mb-lg-0">
+          <h4 class="footer-title">روابط سريعة</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-4 mb-lg-0">
+          <h4 class="footer-title">التصنيفات</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">التكنولوجيا</a></li>
+            <li><a href="index.html">الذكاء الاصطناعي</a></li>
+            <li><a href="index.html">البرمجة</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h4 class="footer-title">تواصل معنا</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:info@salemblog.com"><i class="fas fa-envelope ms-2" style="color: var(--accent);"></i> info@salemblog.com</a></li>
+            <li><a href="#"><i class="fas fa-map-marker-alt ms-2" style="color: var(--accent);"></i> القاهرة، مصر</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>جميع الحقوق محفوظة &copy; 2026 <strong style="color: var(--white);">مدونتي</strong> 
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // Navbar & Back to top
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('.navbar-salem');
+      const btn = document.getElementById('backToTop');
+      if (nav) nav.classList.toggle('scrolled', window.scrollY > 50);
+      if (btn) btn.classList.toggle('visible', window.scrollY > 400);
+    });
+    document.getElementById('backToTop')?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Animations
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Contact Form
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      btn.innerHTML = '<span class="spinner-border spinner-border-sm ms-2"></span> جاري الإرسال...';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        document.getElementById('contactForm').style.display = 'none';
+        document.getElementById('successMsg').style.display = 'block';
+      }, 1500);
+    }
+
+    function resetContactForm() {
+      document.getElementById('contactForm').style.display = 'block';
+      document.getElementById('successMsg').style.display = 'none';
+      document.getElementById('contactForm').reset();
+      const btn = document.getElementById('submitBtn');
+      btn.innerHTML = '<i class="fas fa-paper-plane"></i> إرسال الرسالة';
+      btn.disabled = false;
+    }
+  </script>
+</body>
+</html>
